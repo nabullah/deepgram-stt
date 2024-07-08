@@ -60,7 +60,7 @@ export class DeepgramService {
     this.microphone = await this.getMicrophone();
     this.isStreamingActive = true;
 
-    const _deepgram = createClient('be2f1b846a82a5561c46df5060f6995389eb81d9');
+    const _deepgram = createClient('your deepgram key');
 
     this.socket = _deepgram.listen.live({ model: 'nova-2', smart_format: true });
     this.socket.on('open', async () => {
